@@ -18,4 +18,24 @@ describe('/api', () => {
         }
         )
     }) 
+
+    
 })
+
+describe('/api/restaraunts', () => {
+    test('respond with a json object containing a key of restaurants with a value of an array of all the restaurant objects.' , () => {
+        return request(app)
+        .get('/api/restaurants')
+     .expect(200)
+        .then((res) =>{
+            expect(res.body.restaraunts).toEqual()
+            
+            console.log(res.body.restaraunts);
+            
+        }
+        )
+    }) 
+
+})
+
+
